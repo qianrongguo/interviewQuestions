@@ -6,48 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-      .outer {
-        border: 1px solid #ccc;
-        background: #fc9;
-        color: #fff;
-        margin: 50px auto;
-        padding: 50px;
+      /* #content-id {
+        color: red;
+      } */
+      .content-class {
+        color: blue;
       }
-
-      .clearfix:after {
-        content: "";
-        display: block;
-        clear: both;
-        visibility: hidden;
-        zoom: 1;
-      }
-      .div1 {
-        width: 80px;
-        height: 80px;
-        background: red;
-        float: left;
-      }
-      .div2 {
-        width: 80px;
-        height: 80px;
-        background: blue;
-        float: left;
-      }
-      .div3 {
-        width: 80px;
-        height: 80px;
-        background: sienna;
-        float: left;
+      div {
+        color: grey;
       }
     </style>
   </head>
   <body>
-    <div class="outer clearfix">
-      <div class="div1">1</div>
-      <div class="div2">2</div>
-      <div class="div3">3</div>
-    </div>
+    <div class="content-class" id="content-id" >HElo</div>
   </body>
 </html>
-
-
