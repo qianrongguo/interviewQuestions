@@ -1,6 +1,26 @@
 1. JS 模块包装格式都用过哪些，CommonJS、AMD、CMD。定义一个JS 模块代码，最精简的格式是怎样。
 
-
+    **CommonJS**(nodejs,最早)：这种写法适合服务端，因为在服务器读取模块都是在本地磁盘，加载速度很快。
+    ```js
+    var modA = require('modA');
+    modA.start();
+    ```
+    **AMD**:这种规范是异步的加载的模块。先定义所有依赖，然后在加载模块的回调函数中执行。
+    ```js
+    require([module],callback);
+    //用AMD写一个模块
+    require（['modA'],function(modA){
+        modA.start();
+    });
+    ```
+    CMD是seajs推崇的规范。用的时候再require。
+    ```js
+    define(function(require,exports,module){
+        var modA = require('modA');
+        modA.start();
+    });
+    ```
+    AMD和CMD最大区别是依赖模块的执行时机不同，而不是加载的实机或者方式不同，二者皆为异步加载模块。
 
 2. JS 怎么实现一个类。怎么实例化这个类。
 
